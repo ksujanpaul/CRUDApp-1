@@ -1,0 +1,181 @@
+<html>
+ <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	 
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+            
+	 
+	 
+	 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+   
+   <script type="text/javascript" src="js/materialize.min.html"></script>
+    <title>delete
+	</title>
+    <style>
+        body {margin:0;}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+   
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+li {
+    float: right;
+	
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 15px 5px;
+    text-decoration: none;
+    font-size: 18px;
+       font-family: cursive;
+}
+
+li a:hover:not(.active) {
+    background-color: gray;
+}
+
+.active {
+    background-color: black;
+}
+        
+        
+        cartt{
+            
+            top:30px;
+        }   
+    </style>
+     </head>
+   
+<body background="http://www.psdgraphics.com/file/remove-from-cart-icon.jpg" style="background-repeat:no-repeat; background-size:fit">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+   
+  <ul style="background-color:#3e4f60; ">
+       <a href="/" class="brand-logo left"><img src="https://www.sitewelder.com/art2012/logo-big-shopping.png" alt="logo" width="50px" height="50px" align="left"/></a> 
+       <a href="/" class="cartt" style="font-weight: bolder; font-size: 45px; color:white; text-decoration: none; font-family:georgia; position: relative;">SHOPPING CART</a>
+        <li><a href="/delete">DELETE FROM CART</a></li>
+        <li><a href="/update">UPDATE CART</a></li>
+        <li><a href="/retrieve">RETRIEVE CART</a></li>
+        <li><a href="/create">ADD TO CART</a></li>
+    	</ul>
+    <br><br><br><br>
+
+    <div   ng-app="myApp" ng-controller="ctrl3">
+    <br><br><br><br><br><br><br><br>
+    <div align="center">
+        <div style="width:300px; border: " align="left">
+            <div style="background-color: dimgrey; color:white; padding:3px;"><CENTER><b>DELETE FROM CART</b></CENTER></div>
+
+            <div style="margin:30px" >
+
+                <form>
+                    <CENTER><button class="btn waves-effect waves-light" type="submit"  value="Get Records" ng-click="myFunc()">Get Results<i class="material-icons right"></i>
+  </button></CENTER>
+                </form>
+
+
+            </div>
+
+
+
+        </div>
+
+    </div><br><br>
+        <div>
+            <table width="70%" align="center" height="10%" >
+    <tr ng-repeat="x in records" bgcolor="white">
+        <th>Name</th>
+        <th>Email</th>
+        <th>Mobile</th>
+	<th>Itemname</th>
+        <th>Quantity</th>
+        <th>Price</th>
+        <center><th>Delete</th></center></tr>
+
+    <tr ng-repeat="x in names" bgcolor="grey">
+        <td>{{x.name}}</td>
+        <td>{{x.email}}</td>
+        <td>{{x.mob}}</td>
+		<td>{{x.item}}</td>
+        <td>{{x.quantity}}</td>
+        <td>{{x.price}}</td>
+            <td>    <input type="button" value="delete" ng-click="delete(x.name)"/></td></tr>
+
+</table>
+</div>
+    </div>
+
+    <script>
+                          var app = angular.module('myApp', []);
+                          app.controller('ctrl3', function ($scope, $http) {
+
+                              $scope.delete = function(name) {
+                                   var res = {
+                                  method: 'POST',
+                                  url: 'https://crudappsrujan-shiny-leopard.cfapps.io/delete',
+                   headers: { 'Content-Type': 'Application/json' },
+                   data: {
+                          name: name,
+                         }
+                              }
+
+                                  $http(res)
+                                  .then(function() { $scope.myFunc() });
+                                  //setTimeout($scope.myFunc,1500);
+
+                         }
+
+                              $scope.myFunc = function() {
+                           $scope.records = [
+    {
+      "Name" : "Name",
+      "Email" : "Email",
+        "Mobile":"Mobile",
+		"itemname":"item",
+        "QUANTITY": "quantity",
+        "PRICE":"price",
+        "delete":"Delete"
+    }]
+                                  var name=$scope.name;
+                              var req = {
+                                  method: 'POST',
+                                  url: 'https://crudappsrujan-shiny-leopard.cfapps.io/entiredata',
+                   headers: { 'Content-Type': 'Application/json' },
+                   data: {
+                          name: name,
+                         }
+                              }
+
+                                  $http(req)
+                          .then(function (response) {
+                          $scope.names = response.data;
+
+
+                         });
+                                  };
+
+
+        });
+        </script>
+<br><br><br><br><br><br><br><br><br><br>
+
+
+            </body>
+			</html>

@@ -1,0 +1,327 @@
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+
+    <script type="text/javascript" src="js/materialize.min.html"></script>
+    <title>update</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+
+        li {
+            float: right;
+           
+        }
+
+        input {
+            display: block;
+            color: white    ;
+            text-align: left;
+            padding: 14px 16px;
+            text-decoration: none;
+            width: 100%;
+            margin-bottom: 20px;
+            border: none;
+            border-bottom: 1px solid black;
+            background: transparent;
+            outline: none;
+            height: 40px;
+
+            font-size: 16px;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: left;
+            padding: 15px 5px;
+            font-size: 18px;
+            text-decoration: none;
+               font-family: cursive;
+        }
+
+    
+
+        li a:hover:not(.active) {
+            background-color: gray;
+        }
+
+        .active {
+            background-color: ;
+        }
+
+    </style>
+
+
+
+</head>
+
+<body background="https://www.rd.com/wp-content/uploads/2016/03/02-16-ways-to-lose-weight-walking-errands.jpg" style="background-repeat:no-repeat; background-size:fit">
+
+    <ul style=" background-color:#3e4f60; ">
+        <a  href="/" class="brand-logo left"><img src="https://www.sitewelder.com/art2012/logo-big-shopping.png" alt="logo" width="50px" height="50px" align="left"/></a>
+        <a href="/" style="font-weight: bolder; font-size: 45px; color:white; text-decoration: none; font-family:georgia;">SHOPPING CART</a>
+        <li><a href="/delete">DELETE FROM CART</a></li>
+        <li><a href="/update">UPDATE CART</a></li>
+        <li><a href="/retrieve">RETRIEVE CART</a></li>
+        <li><a href="/create">ADD TO CART</a></li>
+    </ul>
+
+    <br><br><br><br>
+    <div ng-app="myApp" ng-controller="ctrl3">
+        <br>
+      
+            <div align="center">
+                <div style="width:400px; border: none ;background-color:black; opacity: 0.7" align="left">
+                    <div style="background-color:dimgrey; color:#FFFFFF; padding:1px;" align="center"><b>RETRIEVE CART</b></div>
+
+                    <div style="margin:30px">
+
+                        <!--            <form>
+                            <label><h6>Name  &nbsp;&nbsp;&nbsp;:</h6></label><input ng-model="name" class="box" />
+                            <center><button class="btn waves-effect waves-light" type="submit" value="OK" ng-click="myFunc()">Ok<i class="material-icons right"></i>
+  </button></center>
+                        </form>-->
+
+
+
+
+
+
+                        <form class="col s12 white-text "style="height:150px">
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input id="first_name" class="validate" type="text" ng-model="name" >
+                                     <label for="first_name">Name</label>
+
+                                </div>
+
+                            </div>
+                            <center><button class="btn waves-effect waves-light" type="submit" value="OK" ng-click="myFunc()">Ok<i class="material-icons right"></i>
+  </button></center>
+                        </form>
+
+
+
+
+
+
+
+                    </div>
+
+                </div>
+                
+            </div>   
+                
+           
+   
+   
+  
+                
+                
+                
+                     
+                
+                <div align="center" >
+                    <div style="width:500px; border: none ;background-color:black;opacity: 0.7 " align="left">
+                        <div style="background-color:dimgrey; color:#FFFFFF; padding:1px;" align="center"><b>UPDATE</b></div>
+
+                        <div style="margin:20px">
+                            <!--     <form>
+                            <label><h6>Name  &nbsp;&nbsp;&nbsp;:</h6    ></label><input ng-model="name1" class="box" /><br />
+                            <label><h6>Email  &nbsp;&nbsp;&nbsp;:</h6></label><input ng-model="email" class="box" /><br/>
+                            <label><h6>Mobile  &nbsp;:</h6></label><input ng-model="mob" class="box" /><br />
+                            <label><h6>Itemname&nbsp;:</h6></label><input ng-model="item" class="box" /><br />
+                            <label><h6>Quantity :</h6></label><input ng-model="quantity" class="box" /><br/>
+                            <label><h6>itemprice :</h6></label><input ng-model="price" class="box" /><br/>
+                            <center><button class="btn waves-effect waves-light" type="submit" ng-click="myFunc1()" value="retrieve">Update<i class="material-icons right"></i>
+  </button></center>
+
+
+                            </form>
+                            
+                            -->
+
+
+
+                            <div class="row container" style="font-weight: 600; color: deepskyblue; align-items :center">
+                                <form class="col s12 white-text " name="Update_form">
+                                    <div class="row">
+                                        <div class="input-field col s12">
+                                            <input id="first_name" class="validate" type="text" ng-model="name1" placeholder="Name">
+                                           
+                                        </div>
+
+                                    </div>
+                                    <div class="row">
+                                        <div class="input-field col s12">
+                                            <input id="email" type="email" class="validate" ng-model="email" placeholder="Email">
+
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="input-field col s12">
+
+                                            <input id="num" type="text" class="validate" ng-model="mob" placeholder="Mobile">
+
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="input-field col s12">
+                                            <input id="veg" type="text" class="validate" ng-model="item" placeholder="Vegetable Name">
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="input-field col s12">
+                                            <input id="quan" type="text" class="validate" ng-model="quantity" placeholder="Quantity">
+
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="input-field col s12">
+                                            <input id="price" type="text" class="validate" ng-model="price" placeholder="Price">
+
+                                        </div>
+
+                                    </div>
+
+                                    <center><button class="btn waves-effect waves-light" type="submit" ng-click="myFunc1()" value="retrieve" onclick="submitForm()">Update<i class="material-icons right"></i>
+  </button></center>
+
+
+
+
+
+
+                                </form>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                       </div>
+                </div>
+  
+ <script>
+            function submitForm() {
+            document.Update_form.submit();
+            document.Update_form.reset();
+            }
+        </script>
+    
+                    <script>
+                        var app = angular.module('myApp', []);
+                        app.controller('ctrl3', function($scope, $http) {
+                            $scope.myFunc1 = function() {
+                                alert("do you want to update?");
+                                var name = $scope.name;
+                                var email = $scope.email;
+                                var mob = $scope.mob;
+                                var item = $scope.item;
+                                var quantity = $scope.quantity;
+                                var price = $scope.price;
+                                var req = {
+                                    method: 'POST',
+                                    url: 'https://crudappsrujan-shiny-leopard.cfapps.io/update',
+                                    headers: {
+                                        'Content-Type': 'Application/json'
+                                    },
+                                    data: {
+                                        name: name,
+                                        email: email,
+                                        mob: mob,
+                                        item: item,
+                                        quantity: quantity,
+                                        price: price
+                                    }
+                                }
+
+                                $http(req)
+                                    .then(function(response) {
+                                        $scope.na = response.data;
+                                        alert($scope.na);
+
+                                    });
+                            };
+
+
+                            $scope.myFunc = function() {
+                                alert("do you want to retrieve?");
+                                $scope.records = [{
+                                    "Name": "Name",
+                                    "Email": "Email",
+                                    "Mobile": "Mobile",
+                                    "itemname": "item",
+                                    "QUANTITY": "quantity",
+                                    "PRICE": "price"
+                                }]
+                                var name = $scope.name;
+                                var req = {
+                                    method: 'POST',
+                                    url: 'https://crudappsrujan-shiny-leopard.cfapps.io/retrieve',
+                                    headers: {
+                                        'Content-Type': 'Application/json'
+                                    },
+                                    data: {
+                                        name: name,
+                                    }
+                                }
+
+                                $http(req)
+                                    .then(function(response) {
+
+                                        $scope.name1 = response.data[0].name;
+
+                                        $scope.email = response.data[0].email;
+
+                                        $scope.quantity = response.data[0].quantity;
+                                        $scope.item = response.data[0].item;
+
+                                        $scope.price = response.data[0].price;
+
+
+                                        $scope.mob = response.data[0].mob;
+
+
+
+
+                                    });
+                            };
+
+                        });
+
+                    </script>
+
+
+</body>
+
+</html>

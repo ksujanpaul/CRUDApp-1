@@ -1,0 +1,90 @@
+<html>
+<head>
+<!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+ </head>   
+    <title>Main</title>
+    <style>
+
+      body 
+     {
+           background-image:url("https://images.wallpaperscraft.com/image/family_food_supermarket_shop_shopping_80678_1920x1080.jpg");
+            background-repeat: no-repeat;
+            background-size:cover;
+        
+         margin:0;
+        
+     }
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow:hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+}
+        
+ 
+
+li {
+    float: right;
+    
+        }
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    font-family:cursive;
+    padding: 15px 5px;
+    text-decoration: none;
+    font-size: 18px;
+	font-weight: bolder;
+    top: 100;
+}
+
+li a:hover:not(.active) {
+    background-color: gray;
+}
+
+.active {
+    background-color: black;    
+}
+
+        cartt{
+            
+            top:30px;
+        }        
+          
+    </style>
+<body ng-app="myApp" >
+
+
+ <script type="text/javascript" src="js/materialize.min.html"></script>   
+   <ul style="background-color:#3e4f60; ">
+       <a  href="/" class="brand-logo left"><img src="https://www.sitewelder.com/art2012/logo-big-shopping.png " alt="logo" width="50px" height="50px" align="left"/></a> 
+       <a href="/" class="cartt" style="font-weight: bolder; font-size: 45px; color:white; text-decoration: none; font-family:georgia; position: relative;">SHOPPING CART</a>
+        <li><a href="/delete">DELETE FROM CART</a></li>
+        <li><a href="/update">UPDATE CART</a></li>
+        <li><a href="/retrieve">RETRIEVE CART</a></li>
+        <li><a href="/create">ADD TO CART</a></li>
+    	</ul>
+    <br><br><br><br>
+
+</body>
+</html>
