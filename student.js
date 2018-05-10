@@ -14,7 +14,11 @@ var retailSchema = mongoose.Schema({
     },
 
     mob: {
+<<<<<<< HEAD
+        type: Number,
+=======
         type: String,
+>>>>>>> b6bcc206ef6516b2eb26b8c5974009518389c21d
         required: true
     },
 

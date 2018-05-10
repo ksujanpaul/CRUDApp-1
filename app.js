@@ -41,14 +41,22 @@ app.post('/data', function (req, res) {
         name :req.body.name,
         email: req.body.email,
         mob : req.body.mob,
+<<<<<<< HEAD
+        item:req.body.item,
+=======
 	item:req.body.item,
+>>>>>>> b6bcc206ef6516b2eb26b8c5974009518389c21d
         quantity : req.body.quantity,
         price : req.body.price
 
 
     }
 obj.addStudent(data, function(err, data) {
+<<<<<<< HEAD
+        if (data=true) {
+=======
         if (data) {
+>>>>>>> b6bcc206ef6516b2eb26b8c5974009518389c21d
            response ="Data inserted succesfully"
 
             res.send(response);

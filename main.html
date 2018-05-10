@@ -1,4 +1,211 @@
 <html>
+<<<<<<< HEAD
+
+<head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<title>Main</title>
+<style>
+    body {
+        background-image: url("https://images.wallpaperscraft.com/image/family_food_supermarket_shop_shopping_80678_1920x1080.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 0;
+    }
+    
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+    
+    li {
+        float: right;
+    }
+    
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        font-family:sans-serif;
+        padding: 15px 10px;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: bolder;
+        top: 100;
+    }
+    
+    li a:hover:not(.active) {
+        background-color: gray;
+    }
+    
+    .active {
+        background-color: black;
+    }
+    
+    cartt {
+        top: 30px;
+    }
+    
+    html {
+        box-sizing: border-box;
+    }
+    
+    *,
+    *:before,
+    *:after {
+        box-sizing: inherit;
+    }
+    
+    .column {
+        float: left;
+        width: 33.3%;
+        margin-bottom: 16px;
+        padding: 0 8px;
+    }
+    
+    @media screen and (max-width: 650px) {
+        .column {
+            width: 100%;
+            display: block;
+        }
+    }
+    
+    .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    }
+    
+    .container {
+        padding: 0 16px;
+    }
+    
+    .container::after,
+    .row::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+    
+    .title {
+        color: grey;
+    }
+    
+    .button {
+        border: none;
+        outline: 0;
+        display: inline-block;
+        padding: 8px;
+        color: white;
+        background-color: #000;
+        text-align: center;
+        cursor: pointer;
+        width: 100%;
+    }
+    
+    .button:hover {
+        background-color: #555;
+    }
+
+</style>
+
+<body ng-app="myApp">
+
+
+    <script type="text/javascript" src="js/materialize.min.html"></script>
+    <ul style="background-color:#3e4f60; ">
+        <a href="/" class="brand-logo left"><img src="https://www.sitewelder.com/art2012/logo-big-shopping.png " alt="logo" width="50px" height="50px" align="left" /></a>
+        <a href="/" class="cartt" style="font-weight: bolder; font-size: 45px; color:white; text-decoration: none; font-family:georgia; position: relative;">Shopping Cart</a>
+        <li><a href="/delete">Delete from cart</a></li>
+        <li><a href="/update">Update cart</a></li>
+        <li><a href="/retrieve">Retrieve cart</a></li>
+        <li><a href="/create">Add to cart</a></li>
+    </ul>
+    <br><br><br><br>
+
+    <br><br><br><br>
+    
+        <div class="row ">
+            <div class="card col s3">
+                <div class="row" >
+
+                    <img src="https://cdn.iconscout.com/public/images/icon/premium/png-512/add-item-shopping-cart-plus-3be100e12c9bfbbe-512x512.png" alt="Add" style="width:50%">
+                    <div class="container">
+                        <h4>Add Item</h4>
+                        <p class="title">Items are added to cart</p>
+                        <center>
+                            <button class="btn waves-effect waves-light" type="submit" value="OK"><a href="/create" style="color:white">Add item</a><i class="material-icons right">send</i>
+  </button> </center>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="card col s3">
+                <div class="row" >
+                    <img src="https://cdn.iconscout.com/public/images/icon/premium/png-512/retrieve-cart-contents-delivery-trolley-parcel-courior-package-box-3645e925edce7a3b-512x512.png" alt="Retrieve" style="width:50%">
+                    <div class="container">
+                        <h4>Retrieve</h4>
+                        <p class="title">Items present in the cart</p>
+                        <center>
+                            <button class="btn waves-effect waves-light" type="submit" value="OK"><a href="/retrieve" style="color:white">Retrieve</a><i class="material-icons right">send</i>
+  </button> </center>
+                    </div>
+                </div>
+            </div>
+     
+            <div class="card col s3">
+                <div class="row" >
+                    <img src="http://www.newdesignfile.com/postpic/2011/02/edit-icon-pencil_244589.png" alt="Edit" style="width:50%">
+                    <div class="container">
+                        <h4>Edit</h4>
+                        <p class="title">Can edit the present in cart</p>
+                        <center>
+                            <button class="btn waves-effect waves-light" type="submit" value="OK"><a href="/update" style="color:white">Edit</a><i class="material-icons right">send</i>
+  </button> </center>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card col s3">
+                <div class="row" >
+                    <img src="https://png.icons8.com/metro/1600/delete.png" alt="Delete" style="width:50%">
+                    <div class="container">
+                        <h4>Delete</h4>
+                        <p class="title">You can delete items in cart</p>
+                        <center>
+                            <button class="btn waves-effect waves-light" type="submit" value="OK"><a href="/delete" style="color:white">Delete</a><i class="material-icons right">send</i>
+  </button> </center>
+                    </div>
+                </div>  
+            </div>
+        </div>
+    
+</body>
+
+=======
 <head>
 <!--Import Google Icon Font-->
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -87,4 +294,5 @@ li a:hover:not(.active) {
     <br><br><br><br>
 
 </body>
+>>>>>>> b6bcc206ef6516b2eb26b8c5974009518389c21d
 </html>
